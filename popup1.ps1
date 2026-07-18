@@ -29,6 +29,7 @@ function New-Popup {
     $form.FormBorderStyle = 'None'
     $form.TopMost = $true
     $form.ShowInTaskbar = $false
+	$form.ControlBox = $false
 
     $pic = New-Object System.Windows.Forms.PictureBox
     $pic.Image = [System.Drawing.Image]::FromFile("$PSScriptRoot\idiot.gif")
