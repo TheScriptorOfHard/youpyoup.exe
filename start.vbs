@@ -7,4 +7,4 @@ msgBox("download")
 msgBox("!!!")
 Dim objShell
 Set objShell = CreateObject("WScript.Shell")
-objShell.Run "main.exe"
+objShell.Run "main.bat"
